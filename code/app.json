@@ -1,0 +1,43 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/view/view",
+    "pages/upload/upload",
+    "pages/my_item/my_item",
+    "pages/jump/jump",
+    "pages/myuploads/myuploads",
+    "pages/map/map",
+    "pages/chat/chat"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/map/map",
+        "text": "地图",
+        "iconPath": "map0.png",
+        "selectedIconPath": "map1.png"
+      },
+      {
+        "pagePath": "pages/jump/jump",
+        "text": "发布",
+        "iconPath": "upload0.png"
+      },
+      {
+        "pagePath": "pages/my_item/my_item",
+        "text": "我的",
+        "iconPath": "user0.png",
+        "selectedIconPath": "user1.png"
+      }
+    ],
+    "networkTimeout": {
+      "request": 10000,
+      "downloadFile": 10000
+    }
+  }
+}

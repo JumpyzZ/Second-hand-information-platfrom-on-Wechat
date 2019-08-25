@@ -1,0 +1,97 @@
+<!--upload.wxml-->
+<view style="height:100%" style="margin-bottom: 46px">
+<scroll-view scroll-y="true" style="height:100%;width:100%">
+
+    <view class="weui-cells__title">标题</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__bd">
+          <input  bindinput="inputT" class="weui-input" placeholder="请输入文本" />
+        </view>
+      </view> 
+    </view>
+
+    <view class="weui-cells__title">描述</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell">
+        <view class="weui-cell__bd">
+          <textarea bindinput="inputD" class="weui-textarea" placeholder="请输入文本" style="height: 3.3em" />
+          <view class="weui-textarea-counter">200字以内</view>
+        </view>
+      </view>
+    </view>
+
+  <view class="weui-cells weui-cells_after-title">
+  <view class="weui-cell weui-cell_input">
+    <view>
+      <radio-group class="radio-group" bindchange="radioChange">
+        <label class="radio" >
+          想卖<radio value="{{check[0]}}" checked="true"/>
+        </label>
+        <label class="radio" >
+          要买<radio value="{{check[1]}}" checked=""/>
+        </label>
+      </radio-group>
+    </view>
+    </view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">价格:</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" type="number" bindinput="inputP" placeholder="价格"/>   
+        </view>
+      </view>
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">园区:</view>
+      </view>
+      <view class="weui-cell__bd">
+        <picker bindchange="bindPickerChange"value="{{pickerindex}}"range="{{section}}">
+          <view class="weui-input">{{section[index]}}</view>
+        </picker>
+      </view>
+    </view>
+
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">分类:</view>
+      </view>
+    <view class="weui-cell__bd">
+      <picker bindchange="bindPicker2Change"value="{{picker2index}}"range="{{catagory}}">
+        <view class="weui-input">{{catagory[index2]}}</view>
+      </picker>
+    </view>
+    </view>
+
+
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">已选择位置:</view>
+        </view>
+        <view class="weui-cell__bd">
+        <view class="text" bindtap="handleChooseTap">{{addr}}</view>
+        </view>
+      </view>
+
+
+    </view>
+
+    <view class="img-box">
+    <view class="img" wx:for="{{imgpaths}}" wx:for-item="item" wx:key="*this">
+        <image src="{{item}}" data-index="{{index}}" mode="aspectFill" bindtap="previewImg"></image>
+        <view class="delete-btn" data-index="{{index}}" catchtap="deleteImg">删除</view>
+    </view>
+    <view class="upload-img-btn" bindtap="chooseImg" wx:if="{{imgpaths.length<3}}">上传</view>
+  </view>
+
+  
+</scroll-view>
+
+</view>
+<view class="page__hd" style="position:fixed; bottom:0;width: 750rpx;">
+  <view class="weui-btn-area">
+    <button class="weui-btn" type="primary" bindtap="uploadnow">现在发布</button>
+  </view>
+  </view>
+

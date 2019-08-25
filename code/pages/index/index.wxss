@@ -1,0 +1,33 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+  display:flex;
+  flex-direction: column;
+  color:#999;
+  font-size:18px;
+}
+page{
+  height:100%
+}
+.container{background-image:url(http://lc-9fjqphhx.cn-n1.lcfile.com/a59c867cc08c8f61131e.jpg
+);
+  background-size:100%;
+  background-repeat:no-repeat
+}

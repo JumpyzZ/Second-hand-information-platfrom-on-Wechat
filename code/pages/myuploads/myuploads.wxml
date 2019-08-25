@@ -1,0 +1,11 @@
+<!--pages/myuploads/myuploads.wxml-->
+<view>
+
+  <view class="weui-cell weui-cell_access" wx:for="{{myitemlist}}" >
+  <view class="bar">
+    <p>主题:{{item.itemTitle}}</p>
+    <button data-query1="{{item.itemDescribe}}"type="warn" size="mini" bindtap="deleteone" >删除</button>
+  </view>
+  </view>
+
+</view>

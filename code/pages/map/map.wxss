@@ -1,0 +1,45 @@
+/* pages/map/ma p.wxss */
+.nav
+{ 
+  height: 42px;
+  width: 100%;
+  position: absolute;
+  /* top: 100%; */
+  bottom: 0px;
+  display: flex;
+  color: #fff;
+}
+.mapArea{
+  /* height: 500px; */
+  bottom: 42px;  
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  position: absolute;
+  /* background-color: black; */
+}
+.publish,.search{
+  text-align: center;
+  line-height: 42px;
+  height: 42px;
+  flex: 1; /*占用1/2,当改成2时,则占用2/3*/
+
+}
+/* 以下的内容可以整合到上方.publish,.search{}中 */
+.publish
+{
+  background-color: #ff9700;
+  /* width: 50%; */ 
+  /* float: left;  当下方方块多了的时候就不好用了*/
+}
+.search
+{
+  text-align: center;
+  line-height: 42px;
+  /* width: 50%; */
+  background-color: #03bbd5;
+  height: 42px;
+  /* float: right; */
+  flex: 1;
+}

@@ -1,0 +1,10 @@
+/* pages/myuploads/myuploads.wxss */
+.content{
+  display: flex;
+  flex-direction: row;
+}
+.bar{
+  display:flex;
+  justify-content: space-between;
+  width:100%
+}

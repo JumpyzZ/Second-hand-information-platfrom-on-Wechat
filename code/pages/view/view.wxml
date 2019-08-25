@@ -1,0 +1,36 @@
+<scroll-view scroll-y="true" style="height:100vh" wx:for="{{viewitem}}">
+
+  <view>
+
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell" >
+        <view class="weui-cell__hd" style="position: relative;margin-right: 10px;">
+          <image src="{{item.userAvatarurl}}" style="width: 50px; height: 50px; display: block"/>
+          <view class="weui-badge" style="position: absolute;top: -.4em;right: -.4em;"></view>
+        </view>
+        <view class="weui-cell__bd">
+          <view>{{item.userNickname}}</view>
+          <view style="font-size: 13px;color: #888888;">{{item.section}}</view>
+        </view>
+      </view>
+    </view>
+
+    <view class="p">
+      <text class="price">¥</text>
+      <text class="price1">  {{item.itemPrice}}</text>
+    </view>
+
+    <view>
+      <view class="weui-article__h3" style="padding:30rpx">{{item.itemDescribe}}</view>
+    </view>
+
+    <view class="imgshow" wx:for="{{imgpaths}}" wx:for-item="item" wx:key="*this">
+      <view style="margin:0,0,20prx,0"><image src="{{item}}" data-url="{{index}}" bindtap="previewImg" mode="aspectFill"></image></view>
+    </view>
+
+    <view class="date">
+      <p class="date1">发布于:{{item.createdAt}}</p>
+    </view>
+
+  </view>
+</scroll-view>

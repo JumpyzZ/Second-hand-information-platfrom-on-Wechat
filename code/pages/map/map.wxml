@@ -1,0 +1,26 @@
+<!--pages/map/ma p.wxml-->
+<view>
+    <view class="mapArea">
+    <map 
+    id="map" 
+    longitude="{{longitude}}" 
+    latitude="{{latitude}}" 
+    scale="16" 
+    controls="{{controls}}" 
+    bindcontroltap="handleControlTap" 
+    markers="{{markers}}" 
+    bindmarkertap="markertap" 
+    polyline="{{polyline}}" 
+    bindregionchange="" 
+    show-location 
+    style="width: 100%; height: 100vh;"
+    enable-rotate="true"
+    wx:if="{{loadmapflag}}"
+    bindcallouttap="markertap"
+    enable-3D="true"
+    enable-overlooking="true">
+    </map>
+    </view>
+
+    <!-- <button bindtap="bindViewTap">tap</button> -->
+</view>
